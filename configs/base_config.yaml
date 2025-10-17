@@ -1,0 +1,20 @@
+# Project-wide base config
+project:
+  name: SynapseCode
+  author: stifler
+
+paths:
+  root: .                                 # repo root (relative)
+  models_dir: ./models                     # where snapshot_download places models
+  outputs_dir: ./data/outputs              # results, CSVs, json
+  logs_dir: ./logs                         
+
+runtime:
+  device: cuda                             # 'cuda' or 'cpu'
+  gpu_id: 0
+  seed: 42
+  num_workers: 2                           # dataloader / IO parallelism
+
+logging:
+  level: INFO
+  fmt: "[%(asctime)s] %(levelname)s %(name)s - %(message)s"

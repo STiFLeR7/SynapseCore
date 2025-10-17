@@ -1,0 +1,6 @@
+hf-xet
+tqdm
+transformers
+pyyaml
+llama-cpp-python
+pynvml

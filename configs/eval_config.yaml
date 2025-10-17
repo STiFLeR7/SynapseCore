@@ -1,0 +1,29 @@
+# Eval and benchmark settings
+eval:
+  prompt_suite: ./data/prompts/instruction_suite.jsonl
+  sample_prompts_dir: ./data/prompts/samples
+  output_dir: ./data/outputs/eval_results
+  save_outputs: true
+
+metrics:
+  - name: latency_ms
+  - name: tokens_per_sec
+  - name: gpu_peak_mb
+  - name: accuracy            # used where ground-truth exists
+  - name: rouge               # for summarization tasks
+  - name: human_coherence     # placeholder for manual rating
+
+batching:
+  batch_size: 1               # keep conservative for 6GB GPU
+  num_beams: 1
+
+generation:
+  max_new_tokens: 256
+  temperature: 0.0
+  top_p: 0.95
+  repetition_penalty: 1.0
+  do_sample: false
+
+repro:
+  runs: 1
+  deterministic: true

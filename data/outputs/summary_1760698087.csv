@@ -1,0 +1,2 @@
+model,count,latency_ms_mean,tokens_per_sec_mean,gpu_mem_mb_max
+llama3,2,1.7297499998676358,4652.43043128604,142
